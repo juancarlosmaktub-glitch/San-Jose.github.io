@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Parroquia San José | Inicio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--dorado:#d4af37;--vino:#6b1f2b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Montserrat;background:#f5f5f5}
+header{position:fixed;width:100%;top:0;background:rgba(0,0,0,.75);display:flex;justify-content:space-between;align-items:center;padding:20px 60px;z-index:10}
+header img{height:50px}
+nav a{color:white;text-decoration:none;margin:0 15px;font-weight:500}
+nav a:hover{color:var(--dorado)}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;display:flex;align-items:center;padding-left:80px;color:white}
+.hero h1{font-family:'Playfair Display';font-size:4rem;margin-bottom:20px}
+.hero p{max-width:520px;line-height:1.7;margin-bottom:30px}
+.btn{background:var(--dorado);color:#000;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:600}
+section{padding:100px 60px;max-width:1200px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.card{background:white;padding:35px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.12);transition:.4s}
+.card:hover{transform:translateY(-10px)}
+.card h3{color:var(--vino);margin-bottom:10px}
+footer{background:#111;color:#ccc;text-align:center;padding:40px}
+@media(max-width:768px){.hero{padding:40px}.hero h1{font-size:2.6rem}}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<img src="https://www.tierradeenmedio.org.mx/recursos/img/logo-arquidiocesis.png">
+<a href="index.html">Inicio</a>
+<a href="misas.html">Misas</a>
+<a href="avisos.html">Avisos</a>
+<a href="eventos.html">Eventos</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+</header>
+
+<div class="hero">
+<div>
+<p style="letter-spacing:2px">PARROQUIA CATÓLICA</p>
+<h1>Eventos Parroquiales</h1>
+<h3>Fiestas Patronales</h3>
+  <p>Celebraciones y actividades especiales.</p>
+</div>
+</div>
+
+<section>
+</div>
+
+<script>
+let slides=document.querySelectorAll('.slider img');
+let index=0;
+setInterval(()=>{
+slides[index].classList.remove('active');
+index=(index+1)%slides.length;
+slides[index].classList.add('active');
+},4000);
+</script>
+
+<style>
+.slider{position:relative;height:420px;overflow:hidden;border-radius:20px;margin-bottom:80px}
+.slider img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.slider img.active{opacity:1}
+</style>
+
+</section>
+
+<footer>
+<p>Parroquia San José · Arquidiócesis de Tlalnepantla · 2025</p>
+</footer>
+
+</body>
+</html>
